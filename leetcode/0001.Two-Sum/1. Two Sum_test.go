@@ -50,6 +50,10 @@ func Test_Problem1(t *testing.T) {
 			para1{[]int{0, 3}, 5},
 			ans1{[]int{}},
 		},
+		{
+			para1{[]int{2, 7, 11, 15}, 9},
+			ans1{[]int{0, 1}},
+		},
 		// 如需多个测试，可以复制上方元素。
 	}
 

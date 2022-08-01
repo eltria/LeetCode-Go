@@ -69,3 +69,18 @@ func max(a int, b int) int {
 	}
 	return b
 }
+
+func legnthxxxx(s string) int {
+	left, right, res := 0, 0, 0
+	m := make(map[byte]int, len(s))
+
+	for left < len(s) {
+		if idx, ok := m[s[left]]; ok && idx >= right {
+			right = idx + 1
+		}
+		m[s[left]] = left
+		left++
+		res = max(res, left-right)
+	}
+	return res
+}
